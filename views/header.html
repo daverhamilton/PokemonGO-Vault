@@ -1,0 +1,47 @@
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="homeheader" role="navigation">
+		<div id="super-header">
+		</div>
+		<div class="container" id="headerContainerAlign">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed headerButtonHeight" id="collapseButtonAlign" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand homeHeaderSize" id="nav-logo headerAlign" ui-sref="app">
+					<strong class="orangeFont" id="otherHeader">thePokémonVault</strong><br/>
+					<span class="hidden-xs" id="otherTagline">
+						Secure the answers to all your <strong>Pokémon Go</strong> questions!
+					</span>
+				</a>
+			</div>
+			<div class="navbar-collapse collapse navbar-ex1-collapse" style="margin-right: 10%">
+				<ul class="nav navbar-nav pull-right">
+					<li class="hundredpixels">
+						<a ui-sref="app" class="textCenter headerLineHeight">
+						<span class="glyphicon glyphicon-home" aria-hidden="true"></span><br/>Home</a>
+					</li>
+					<li class="dropdown hundredpixels">
+						<a class="dropdown-toggle textCenter headerLineHeight" data-toggle="dropdown" aria-haspopup="true" data-target="#infomenu" aria-expanded="false">
+						 <span class="glyphicon glyphicon-info-sign"></span><br/>Info <span class="caret"></a>
+						<ul class="dropdown-menu" id="infomenu">
+							<li><a ui-sref="app.pokemonlist">Pokemon List</a></li>
+							<li><a ui-sref="app.movesets">Movesets</a></li>
+							<li><a ui-sref="app.types">Types</a></li>
+						</ul>
+					</li>
+					<li class="dropdown hundredpixels">
+						<a class="dropdown-toggle textCenter headerLineHeight" data-toggle="dropdown" aria-haspopup="true" data-target="#toolsmenu" aria-expanded="false">
+						<span class="glyphicon glyphicon-wrench"></span><br/>Tools <span class="caret"></span></a>
+						<ul class="dropdown-menu" id="toolsmenu">
+							<li><a ui-sref="app.calc">Level 40 Calculator</a></li>
+							<li><a ui-sref="app.evocalc">Mass Evolution Calculator</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	

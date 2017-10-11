@@ -1,0 +1,121 @@
+	<div ng-controller="PokemonListController">
+		<div class="row">
+			<div class="spacer"></div>
+			<div class="col-xs-1 col-sm-2"></div>
+			<div class="col-xs-10 col-sm-8">
+				<div class="col-xs-12 xlMediaPadding">
+					<div class="centerDiv">
+						<div class="blueFont subHeaderTitle">
+							<strong>Browse Pokémon</strong>
+						</div>
+						<div class="descriptionSection">Find out what Pokémon you're missing to complete your dex, sort to find the highest possible CP to top your local gyms, or click on a Pokémon of your choice to learn detailed information including Individual Values and Movesets!</div>
+						<div class="col-xs-8" id="pokemonFilterBox">
+							<div class="col-xs-12">
+							<button type="button" class="button btn settingsButton" ng-click="isCollapsed = !isCollapsed">Settings</button>
+							<div uib-collapse="!isCollapsed">	
+								<div class="well well-lg" id="pokemonSettings">
+									<table>
+										<tr style="height: 30px">
+											<td class="borderLeft borderRight pokemonSettingsHeader pokemonHeadingCellWidth orangeFont textTableHeaders"><strong>Show</strong></td>
+											<td class="borderRight pokemonSettingsHeader pokemonHeadingCellWidth textTableHeaders orangeFont"><strong>Sort By</strong></td>
+										</tr>
+										<tr>
+											<td class="borderLeft borderRight"><input class="glowing-border" type="checkbox" ng-click="includeGen('1')"/> Gen 1<br/></td>
+											<td class="borderRight"><input name="sortBy" class="glowing-border" ng-model="sortPokeBy" value="'maxCP'" type="radio" ng-click="changeSortReverse()"/> Highest CP</td>
+										</tr>
+										<tr>
+											<td class="borderLeft borderRight"><input class="glowing-border" type="checkbox" ng-click="includeGen('2')"/> Gen 2</td>
+											<td class="borderRight"><input name="sortBy" class="glowing-border" ng-model="sortPokeBy" value="'id'" type="radio" ng-click="changeSortReverse()" checked/> Pokédex ID</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							</div>
+
+						</div>
+						<div class="col-xs-4"></div>
+
+						<div class="col-xs-12 section">
+							<div class="col-xs-6 col-md-4 pokemonListCell" ng-repeat="pokemon in full_pokemon_list | filter:genSwitch | orderBy: sortPokeBy:sortReverse2" ng-class="{cellHover: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+								<div class="col-xs-12 col-sm-6 textCenter pokemonListName" ng-click="open(pokemon)">
+									<span class="orangeFont"><strong>{{pokemon.name}} (#{{pokemon.id}})</strong></span><br/>
+									Max CP: {{pokemon.maxCP}}<br/>
+									Types: <img class="hoverImage pokemonTypeImage" uib-popover="{{pokemon.type1}}" popover-class="popoverMedals" popover-trigger="'mouseenter'" popover-placement="bottom" src="{{pokemon.type1Image}}"/> <img class="hoverImage pokemonTypeImage" uib-popover="{{pokemon.type2}}" popover-class="popoverMedals" popover-trigger="'mouseenter'" popover-placement="bottom" src="{{pokemon.type2Image}}"/>
+								</div>
+								<div class="col-md-6 hidden-xs visible-sm visible-md visible-lg zeroPadding" ng-click="open(pokemon)"">
+				   				<div class="frame">
+				   					<img src="{{pokemon.thumbnail}}" id="pokemonThumbnail"/>
+				   					<!--MODAL WINDOW--> 
+		                <script type="text/ng-template" id="myModalContent.html">
+		                  <div class="modal-header">
+		                    <div class="col-xs-3">
+		                       <img src="{{pokemon.thumbnail}}" id="pokemonThumbnailModal"/>
+		                    </div>
+		                      <div class="col-xs-9">
+		                        <h3 class="orangeFont modalPokemonName"><strong>{{pokemon.name}} (#{{pokemon.id}})</strong></h3>
+		                        {{pokemon.description}}
+		                      </div>
+		                    </div>
+		                    <div class="modal-body">
+													<table>
+														<tr>
+															<th class="borderLeft borderRight pokemonHeadingCellWidth textCenter orangeFont textTableHeaders"><span>Max CP</span></th>
+															<th colspan="2" class="borderRight pokemonHeadingCellWidth textCenter textTableHeaders orangeFont"><span>Stats</span></th>
+															<th class="borderRight pokemonHeadingCellWidth textCenter orangeFont textTableHeaders"><span>Specials</h5></th>
+														</tr>
+														<tr>
+															<td rowspan="3" class="borderLeft borderRight blueFont textCenter pokemonModalCP"><strong>{{pokemon.maxCP}}</strong></td>
+															<td>Attack:</td>
+															<td class="borderRight textRight blueFont"><strong>{{pokemon.attack}}</strong></td>
+															<td class="borderRight"><span ng-show="{{pokemon.regional}}">Regional Exclusive</span></td>
+														</tr>
+														<tr>
+															<td>Defense:</td>
+															<td class="borderRight textRight blueFont"><strong>{{pokemon.defense}}</strong></td>
+															<td class="borderRight"></td>
+														</tr>
+														<tr>
+															<td>Stamina:</td>
+															<td class="borderRight textRight blueFont"><strong>{{pokemon.stamina}}</strong></td>
+															<td class="borderRight"></td>
+														</tr>
+													</table>
+													<div class="col-xs-2"></div>
+													<div class="col-xs-8 borderTop"></div>
+													<div class="col-xs-2"></div>
+													<table>
+														<tr>
+															<th class="borderRight borderLeft textCenter orangeFont textTableHeaders" colspan="2"><span>Quick Moves</span></th>
+															<th class="borderRight borderLeft textCenter orangeFont textTableHeaders" colspan="2"><span>Charge Moves</span></th>
+														</tr>
+														<tr ng-repeat="move in pokemon.moves">
+															<td class="borderLeft">
+																<span ng-show="!{{move.quickLegacy}}">{{move.quickName}}</span>
+																<span class="legacyMoveStrikethrough" ng-show="{{move.quickLegacy}}">{{move.quickName}}</span>
+															</td>
+															<td class="borderRight">
+																<img src="{{move.quickImage}}"/>
+															</td>
+															<td class="borderLeft">
+																<span ng-show="!{{move.chargeLegacy}}">{{move.chargeName}}</span>
+																<span class="legacyMoveStrikethrough" ng-show="{{move.chargeLegacy}}">{{move.chargeName}}</span>
+															</td>
+															<td class="borderRight">
+																<img src="{{move.chargeImage}}"/>
+															</td>
+														</tr>
+													</table>
+												</div>
+		                    <div class="modal-footer">
+		                    </div>
+		                </script>
+									</div>
+				   			</div>
+				   		</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-1 col-sm-2"></div>
+			</div>
+	</div>

@@ -1,0 +1,894 @@
+
+body {
+  padding-top: 57px;
+  z-index: 0;
+  background: #e6e6e6;
+  color: black;
+}
+
+.cellHover {
+  border: 1px solid #4195fc; /* some kind of blue border */
+  /* make it glow! */
+  -webkit-box-shadow: inset 0px 0px 5px #00008B;
+  -moz-box-shadow: inset 0px 0px 5px #00008B;
+}
+
+.centerImage {
+  display: block;
+  margin: auto;
+}
+
+.nav {
+  color: white;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  border-bottom-color: #FF4500;
+  border-bottom-width: 2px;
+}
+
+#roundedCornerOne, #roundedCornerFour {
+  border-radius: 40px;
+  text-align: center;
+  border-color: #00008B; 
+  background-color: white; 
+  border-style: solid; 
+  min-height: 175px; 
+  margin: auto; 
+  width: 80%; 
+  margin-right: 2.5%; 
+  margin-left: 6%; 
+  margin-bottom: 5%; 
+  padding: 0px 0px 0px 0px;
+}
+
+.descriptionSection {
+  border-radius: 20px;
+  text-align: center;
+  border-color: black; 
+  background-color: white; 
+  border-style: solid; 
+  border-width: 1px;
+  box-shadow: 2px 2px 2px black;
+  margin: auto; 
+  margin-right: 2.5%; 
+  margin-left: 2.5%; 
+  margin-bottom: 5%;
+  margin-top: 3%; 
+  padding: 15px 15px 15px 15px;
+  font-size: 1em;
+  }
+
+.btnDetails {
+  padding: 2px 4px 2px 4px;
+  font-size: 0.8em;
+  margin: 0px 0px 0px 0px;
+}
+
+.homeRowHeight {
+  height: 30px;
+}
+
+#roundedCornerTwo, #roundedCornerThree {
+  border-radius: 40px;
+  text-align: center;
+  border-color: #FF4500; 
+  background-color: white; 
+  border-style: solid; 
+  min-height: 175px; 
+  margin: auto; 
+  width: 40%; 
+  margin-right: 2.5%; 
+  margin-left: 5.5%; 
+  margin-bottom: 5%; 
+  padding: 0px 0px 0px 0px;
+}
+
+.fullBorder {
+  border-size: 1px;
+  border-style: solid;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+
+#headerAlign {
+  margin-bottom: 5px; 
+  height: 80px; 
+  padding-bottom: 0px;
+}
+
+#collapseButtonAlign {
+  margin-top: 0px; 
+  margin-bottom: 0px;
+}
+
+#headerContainerAlign {
+   padding-left: 5%;
+}
+
+.orangeFontSize {
+  color: #FF4500;
+  font-size: 16px;
+}
+
+.orangeFont {
+  color: #FF4500;
+}
+
+.btn {
+  background-color: #00008B;
+  text-decoration-color: white;
+  color: white;
+}
+.btn:focus {
+  background-color: #00008B;
+  text-decoration-color: white;
+  color: white;
+}
+
+.settingsButton {
+  margin-bottom: 15px;
+}
+
+.btn:hover {
+  color:#FF4500;
+}
+
+.blueFont {
+  color:  #00008B;
+}
+
+.maxThumbnailWidth {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.pokemonSection {
+  padding-top: 0px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.popover {
+  color: #000000;
+  background-color: #FF4500;
+  font-weight: bold;
+}
+
+#smallPadding {
+  padding-bottom: 5px;
+}
+
+#goldBorder {
+  border-color: gold;
+}
+
+#silverBorder {
+  border-color: silver;
+}
+
+.popover.bottom .arrow:after {
+  border-bottom-color: #FF4500;
+}
+
+.popover.right .arrow:after {
+  border-right-color: #FF4500;
+}
+
+.progress {
+  margin-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.progress-bar {
+  background-image: linear-gradient(to bottom,#FF4500 0,#FF4500 100%);
+  background-color:#FF4500;
+  padding-top: 0px;
+  color: #000000;
+  font-size: 14px;
+}
+
+.pageHeader {
+   text-align: center;
+   font-size: 3em;
+}
+
+.row-footer {
+  margin: 0px auto;
+  padding: 10px 0px;
+  background: black;
+  border-top: 3px solid blue;
+  width: 100%;
+  color: white;
+  height: 100px;
+}
+
+.spacer {
+  height: 50px;
+  margin-right: 0px;
+  margin-bottom: 15px;
+}
+
+.spacerHome {
+  height:50px;
+  margin-right: 0px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table>tbody>tr:nth-of-type(n) {
+  background-color: #545454;
+}
+
+.table>tbody>tr:nth-of-type(9) {
+  background-color: lightgrey;
+  color: #00008B;
+}
+
+.table>tbody>tr#pokemonow {
+  height: 60px;
+  padding-top: 30px;
+}
+
+.table>tbody>tr>td.tdPdding {
+  padding-top:30px;
+}
+
+.table>thead>tr>th {
+  border-width: 2px;
+  background-image: linear-gradient(to bottom,#00008B 0,#0000b3 50%);
+  text-align: center;
+  color: #ffffff;
+}
+
+.table>tbody>tr>td.trainerData {
+  text-align: center;
+}
+
+.table>tbody>tr.trainerRow {
+  height: auto;
+  border-bottom: solid;
+}
+
+.table>thead>tr>th.textAlignRight, td.textAlignRight {
+  text-align: right;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+#borderRight {
+  border-right: dotted;
+  border-right-width: 1px;
+}
+
+#dropdownPokemon {
+  color: black;
+}
+
+.headerLineHeight {
+  margin-top: 8px;
+  line-height: 30px;
+}
+
+
+
+
+#nav-logo {
+  color: blue;
+}
+
+#ralign {
+  text-align: right;
+  padding-right: 0px;
+}
+
+
+#lalign {
+  text-align: left;
+  padding-left: 0px;
+}
+
+#mainTable {
+  margin-top: 30px;
+}
+
+#super-header {
+  background: #00008B;
+  padding: 7px;
+}
+
+#Top_Visibility {
+  display: block;
+}
+
+#Fave_Visibility {
+  display: none;
+}
+
+#trainer {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#trainerDetails {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navbar-collapse.in {
+  overflow-y: hidden;
+}
+
+ #nav-logo-home {
+  min-width: 400px;
+  margin-bottom: 5px; 
+  height: 80px; 
+  padding-bottom: 0px;
+ }
+
+ .legacyMoveStrikethrough {
+  text-decoration: line-through;
+ }
+
+ footer > .container > .row {
+  padding-top: 30px;
+ }
+
+ .container-fluid > .xlMediaPadding {
+  margin-bottom: 50px;
+ }
+
+ .textTableHeaders {
+  font-size: 1.1em;
+ }
+
+th, td {
+  padding: 0px 15px 0px 15px;
+}
+
+#modalPokemonName {
+  margin: 5px 0px 10px 0px;
+}
+
+.borderRight {
+  border-right-style: solid; 
+  border-right-width: 2px; 
+  border-right-color: darkgrey;
+}
+
+.borderLeft {
+  border-left-style: solid; 
+  border-left-width: 2px; 
+  border-left-color: darkgrey;
+}
+.borderTop {
+  border-top-style: solid; 
+  border-top-width: 1.5px; 
+  border-top-color: darkgrey;
+  margin-top: 13px;
+  height: 15px;
+}
+
+#pokemonFilterBox {
+  margin-bottom: 5px;
+  margin: auto;
+  position: relative;
+
+}
+
+.frame {
+  height: 100px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#pokemonThumbnail {
+  background-color: white; 
+  vertical-align: middle;
+  height: 50px;
+  max-width: 90px;
+  align-content: right;
+  margin-top: 22px;
+}
+
+.zeroPadding {
+  padding: 0px 0px 0px 0px;
+}
+
+#pokemonThumbnailModal {
+  background: white;
+  vertical-align: middle;
+  height: 90px;
+  padding-top: 35px;
+  float: right;
+}
+
+.calc40xpInput {
+  margin: auto; 
+  font-color: black;
+}
+
+#currentLevel {
+  font-size: 3.5em;
+}
+
+#calc40Emphasis {
+   font-size: 3em;
+}
+
+#calcSpacer {
+  height: 25px;
+}
+
+.pokemonListName {
+  padding: 20px 0px 20px 0px;
+}
+
+.xlMediaPadding > .container-fluid {
+  width: 80%; 
+  margin: auto;
+}
+
+.pokemonModalCP {
+  font-size: 2em;
+}
+
+.pokemonListCell {
+  background-color: white; 
+  color: black;
+}
+
+.pokemonTypeImage {
+  max-height: 15px; 
+  max-width: 15px;
+}
+
+.homeSectionHeader {
+  font-size: 1.5em; 
+  font-color: black; 
+  padding-top: 15px;
+  display: inline-block;
+}
+
+.homeSectionList {
+  text-align: left; 
+  margin-bottom: 5px; 
+  width: 80%;
+  font-size: 1.4em; 
+}
+
+.hundredpixels {
+  width: 100px;
+}
+
+#pokemonSettings {
+  border-width: 2px; 
+  border-color: black; 
+  width: 350px;
+}
+
+.subHeaderTitle {
+  text-align: center; 
+  font-size: 3em;
+}
+
+table {
+  margin: auto; 
+  position: relative;
+}
+
+.pokemonHeadingCellWidth {
+  width: 33%;
+}
+
+.centerDiv {
+  width: 90%; 
+  margin: auto;
+}
+
+/** required by angular.ui.bootstrap **/
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer; 
+}
+
+#promos {
+  position: relative;
+  padding-top: 8%;
+}
+
+/* xs < 768 */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 0.9em;
+  }
+  /*Code for 1st, 3rd, 5th, etc div - this is when the ng-repeat 
+  collapses into two sets and contrls border for left side*/
+  .section > div:nth-of-type(2n+1) {
+    border-style: solid;
+    border-color: black;
+    border-width: 1.5px 0.75px 1.5px 1.5px;
+  }
+  /*Code for 2nd, 4th, 6th etc div - this is when the ng-repeat 
+  collapses into two sets and controls border for right side*/
+  .section > div:nth-of-type(2n+2) {
+    border-style: solid;
+    border-color: black;
+    border-width: 1.5px 1.5px 1.5px 0.75px;
+  }
+
+  .pull-right {
+    float: none !important;
+  }
+
+  .navbar-brand {
+    font-size: 1.7em;
+  }
+
+  .homeHeaderSize {
+    margin-bottom: 5px; 
+    height: 80px; 
+    padding-bottom: 0px;
+  }
+
+   #roundedCornerOne, #roundedCornerTwo, #roundedCornerThree, #roundedCornerFour {
+    width: 80%;
+    margin-left: 9%;
+  }
+
+  #roundedCornerOne, #roundedCornerThree {
+    border-color: #00008B; 
+  }
+
+  #roundedCornerTwo, #roundedCornerFour {
+    border-color: #FF4500; 
+  }
+
+  .pokemonSettingsHeader {
+    margin-bottom: 5px;
+    width: 33%;
+  }
+
+  .descriptionSection {
+    font-size: 1.1em;
+  }
+
+  #pokemonSettings {
+    width: 230px;
+    padding: 7px 10px 7px 10px;
+  }
+
+  #homeHeader {
+    font-size: 1.5em; 
+    line-height: 28px;
+  }
+
+  #otherHeader {
+    font-size: 1.4em; 
+    line-height: 50px;
+  }
+
+  #homeTagline, #otherTagline {
+    padding-left: 10px; 
+    font-size: 0.6em; 
+    color: white;
+  }
+
+  #otherTagline {
+    padding-left: 5%; 
+    font-size: 0.5em; 
+  }
+
+  .headerButtonHeight {
+    height: 86px;
+  }
+
+  #roundedCornerOne > table, #roundedCornerTwo > table, #roundedCornerThree > table, #roundedCornerFour > table {
+     margin: auto; 
+     width: 90%;
+  }
+
+  .homeSectionList {
+    text-align: center;
+    margin-bottom: 2px;
+  }
+
+  .xlMediaPadding {
+    padding: 0px 0px 0px 0px;
+  }
+
+  #marginEvoCalc {
+    margin-bottom: 10%;
+  }
+}
+
+/* sm */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1em;
+  }
+  /*Code for 1st, 3rd, 5th, etc div - this is when the ng-repeat 
+  collapses into two sets and contrls border for left side*/
+  .section > div:nth-of-type(2n+1) {
+    border-style: solid;
+    border-color: black;
+    border-width: 1.5px 0.75px 1.5px 1.5px;
+  }
+    /*Code for 2nd, 4th, 6th etc div - this is when the ng-repeat 
+    collapses into two sets and controls border for right side*/
+  .section > div:nth-of-type(2n+2) {
+    border-style: solid;
+    border-color: black;
+    border-width: 1.5px 1.5px 1.5px 0.75px;
+  }
+
+  #roundedCornerOne, #roundedCornerTwo, #roundedCornerThree, #roundedCornerFour {
+    width: 40%;
+  }
+
+  .hundredpixels {
+    height: 86px;
+  }
+
+  .navbar-header {
+    min-width: 250px;
+    height: 86px;
+  }
+
+  #homeHeader, #otherHeader {
+    font-size: 2em; 
+    line-height: 30px;
+  }
+
+  #otherHeader {
+    font-size: 1.5em; 
+  }
+
+  #homeTagline, #otherTagline {
+    padding-left: 15px; 
+    font-size: 0.8em; 
+    color: white;
+  }
+
+  #otherTagline {
+    font-size: 0.5em;
+  }
+
+  .homeSectionList {
+    font-size: 1.2em; 
+  }
+
+  #nav-logo {
+    padding-left: 3%;
+  }
+
+  .xlMediaPadding {
+    padding: 0px 0px 0px 0px;
+  }
+
+  #marginHome {
+    margin-bottom: 15%;
+  }
+
+  #marginCalc {
+    margin-bottom: 20%;
+  }
+
+  #marginEvoCalc {
+    margin-bottom: 30%;
+  }
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 1.2em;
+  }
+  /*Code for 1st, 4th, 7th etc div - this is when the ng-repeat 
+  has 3 sets and controls border for left*/
+  .section > div:nth-of-type(3n+1) {
+    border-style: solid;
+    border-color: black;
+    border-width: 1.5px 0.75px 1.5px 1.5px;
+  }
+  /*Code for 2nd, 5th, 8th etc div - this is when the ng-repeat 
+  has 3 sets and controls border for middle*/
+  .section > div:nth-of-type(3n+2) {
+    border-style: solid;
+    border-color: black;
+    border-width: 1.5px 0.75px 1.5px 0.75px;
+  }
+  /*Code for 3rd, 6th, 9th etc div - this is when the ng-repeat 
+  has 3 sets and controls border for right*/
+  .section > div:nth-of-type(3n+3) {
+    border-style: solid;
+    border-color: black;
+    border-width: 1.5px 1.5px 1.5px 0.75px;
+  }
+
+  .hundredpixels {
+    height: 86px;
+  }
+
+  .navbar-header {
+    min-width: 350px;
+  }
+
+  #roundedCornerOne, #roundedCornerTwo, #roundedCornerThree, #roundedCornerFour {
+    width: 40%;
+  }
+
+  .homeSectionList {
+    font-size: 1.1em; 
+  }
+
+  #homeHeader {
+    font-size: 2em; 
+    line-height: 30px;
+  }
+
+  #otherHeader {
+    font-size: 1.6em; 
+    line-height: 30px;
+  }
+
+  #otherTagline, #homeTagline {
+    padding-left: 20px; 
+    font-size: 1em; 
+    color: white;
+  }
+
+  #homeTagline {
+    font-size: 0.8em; 
+  }
+
+  #otherTagline {
+    font-size: 0.6em;
+  }
+
+  .xlMediaPadding {
+    padding: 0px 0px 0px 0px;
+  }
+
+  #marginHome {
+    margin-bottom: 15%;
+  }
+
+  #marginCalc {
+    margin-bottom: 20%;
+  }
+
+  #marginEvoCalc {
+    margin-bottom: 30%;
+  }
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 1.4em;
+  }
+
+  #roundedCornerOne, #roundedCornerTwo, #roundedCornerThree, #roundedCornerFour {
+    width: 40%;
+  }
+
+  .navbar-header {
+    min-width: 350px;
+  }
+
+  #homeHeader {
+    font-size: 2em; 
+    line-height: 30px;
+  }
+
+  #otherHeader {
+    font-size: 1.6em; 
+    line-height: 30px;
+  }
+
+  #otherTagline, #homeTagline {
+    padding-left: 20px; 
+    font-size: 1em; 
+    color: white;
+  }
+
+  #homeTagline {
+      font-size: 0.8em; 
+    }
+
+  #otherTagline {
+    font-size: 0.7em;
+  }
+
+  .hundredpixels {
+    height: 86px;
+  }
+
+  .xlMediaPadding {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .homeSectionList {
+    font-size: 1em; 
+  }
+
+  #marginHome {
+    margin-bottom: 15%;
+  }
+
+  #marginCalc {
+    margin-bottom: 20%;
+  }
+
+  #marginEvoCalc {
+    margin-bottom: 30%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+
+  .xlMediaPadding {
+    padding: 0px 150px 0px 150px;
+  }
+}
+
+input, select, textarea {
+  color: #000000;
+}
+
+.fade.ng-hide {
+  transition:0.5s linear all;
+  opacity:0;
+}
+
+.glowing-border {
+  border: 1px solid #4195fc; /* some kind of blue border */
+
+  /* round the corners */
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+
+
+  /* make it glow! */
+  -webkit-box-shadow: 0px 0px 4px #4195fc;
+     -moz-box-shadow: 0px 0px 4px #4195fc;
+          box-shadow: 0px 0px 4px #4195fc;
+
+}
+
+.glowing-border:focus {
+  border: 1px solid #FF4500; /* some kind of blue border */
+  /* make it glow! */
+  -webkit-box-shadow: 0px 0px 4px #FF4500;
+     -moz-box-shadow: 0px 0px 4px #FF4500;
+          box-shadow: 0px 0px 4px #FF4500; /* some variation of blue for the shadow */
+}
+
+.section > div {
+  height: 100px; 
+  margin: 0px 0px 10px 0px; 
+  padding: 0px 0px 0px 0px;
+}
+
+/*https://thinkster.io/angular-animations-tutorial*/
+.transitionBox {
+  -webkit-transition:all linear 0s;
+  transition:all linear 0.8s;
+}
+
+.transitionBox.ng-hide {
+  opacity:0;
+}

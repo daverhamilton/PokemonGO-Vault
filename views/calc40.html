@@ -1,0 +1,40 @@
+	
+	<div ng-controller="calc40Controller">
+		<div class="container-fluid" id="marginCalc">
+			<div class="spacer"></div>
+			<div class="col-sm-2"></div>
+			<div class="col-xs-12 col-sm-8 xlMediaPadding">
+				<div class="container-fluid textCenter">
+					<div class="row blueFont subHeaderTitle">
+						<strong>Level 40 Calculator</strong>
+					</div>
+					<div class="descriptionSection">Estimate when you will reach level 40 by entering your total experience and start date from the Trainer Profile section in the Pokémon Go app!</div>
+					<div class="row" id="calcSpacer"></div>
+					<input ng-keyup="levelInput()" placeholder="Trainer Experience" ng-model="xpInput" class="glowing-border textCenter calc40xpInput" type="text" id="numbersonly">
+					<div class="container-fluid textCenter" style="margin-bottom: 8%; margin-top: 8%">
+						<div class="row">
+							Current Level<br/> <strong class="blueFont" id="currentLevel">{{levelInput()}}</strong>
+						</div>
+					</div>
+					<div class="textCenter">
+						Start Date<br/>
+						<input ng-keyup="daysToDate()" id="calc40DateInput" class="glowing-border textCenter calc40xpInput" type="date" name="dateinput" placeholder="yyyy-mm-dd" ng-model="dateInput">
+					</div>
+					<div class="row" style="margin-top: 10%; margin-bottom: 20%">
+						<div class="container-fluid transitionBox" ng-show="myValue">
+							<div class="row">
+								<div class="textCenter" id="detailedResults"><strong>You started playing {{daysToDate()}} days ago and gained an average of <br/><strong class="orangeFont textCenter" id="calc40Emphasis">{{xpPerDay()}} </strong><br/>XP per day!<br/>
+								You should reach level 40 in <br/><strong class="orangeFont" id="calc40Emphasis">{{daysToForty()}} </strong><br/>days.</strong></div>
+							</div>
+						</div>
+						<div class="container-fluid transitionBox" ng-show="level40Plus">
+							<div class="row">
+								<div class="textCenter" id="detailedResults"><span class="orangeFont" id="calc40Emphasis">Congratulations, you've already reached level 40!</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="col-sm-2"></div>
+		</div>
+	</div>

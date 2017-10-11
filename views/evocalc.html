@@ -1,0 +1,37 @@
+
+	<div ng-controller="evoController">
+		<div class="container-fluid" id="marginEvoCalc">
+			<div class="spacer"></div>
+			<div class="col-xs-1 col-sm-2 col-md-3"></div>
+			<div class="col-xs-10 col-sm-8 col-md-6 xlMediaPadding">
+					<div class="row blueFont subHeaderTitle">
+						<strong>Mass Evolution Calculator</strong>
+					</div>
+					<div class="descriptionSection">Maximize your mass evolutions by using this calculator to determine how many Pokemon you require!</div>
+				<div class="col-xs-12 col-sm-7" style="margin-bottom: 15px">
+					<form>
+						Pokémon: 
+						<select ng-model="pokemonInput" class="glowing-border" style="margin-bottom: 10px" required>
+							<option ng-repeat="pokemon in full_pokemon_list | filter: greaterThan('candy_required', 0) | orderBy:'name'" ng-keyup="calculateEvo()" value="{{pokemon.name}}">{{pokemon.name}}</option>
+						</select><br/>
+						Candy Qty: <input id="evoCandyInput" class="glowing-border" type="text" ng-model="candyInput" ng-keyup="calculateEvo()" style="margin-bottom: 10px" required><br/>
+						<div class="col-xs-1"></div>
+						<div class="col-xs-11">
+							<input type="checkbox" ng-click="calculateEvo()" ng-model="transferBox"> Transfer Pokémon after each evolution<br/>
+							<input type="checkbox" ng-click="calculateEvo()" ng-model="bonusCandyBox"> Double candy on each transfer<br/>
+						</div>
+					</form>
+				</div>
+				<div class="col-xs-12 col-sm-5 transitionBox" style="margin-bottom: 15px" ng-show="myValue">
+					<img class=" centerImage" src="{{pokemonImage}}" style="max-width: 125px; max-height: 125px">
+				</div>
+				<div class="col-xs-12">
+					<div class="container-fluid orangeFont transitionBox textCenter" style=" width: 90%; margin: auto; margin-bottom: 50px; font-size: 1.5em" ng-show="myValue">
+						Total Number of Evolutions: {{fullEvos}}<br/>
+						Remaining Candy: {{remainingCandy}}<br/>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-1 col-sm-2 col-md-3"></div>
+		</div>
+	</div>
